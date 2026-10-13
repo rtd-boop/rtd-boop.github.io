@@ -1,4 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Placeholder: tide pool at low tide">
-<rect width="600" height="400" fill="#bfe0dc"/><circle cx="300" cy="200" r="90" fill="#17505c"/>
-<path d="M0 320 Q150 270 300 320 T600 320 V400 H0Z" fill="#10252b" opacity=".8"/>
-<text x="300" y="215" font-family="Georgia,serif" font-size="34" fill="#fff" text-anchor="middle">Your hero image</text></svg>
