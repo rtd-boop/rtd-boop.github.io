@@ -1,30 +1,25 @@
-/* 1. Use a more-intuitive box-sizing model */
+/* Vibecoding is terrible if you truly want to learn actual coding. */
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-/* 2. Remove default margin so you have full control */
 * {
   margin: 0;
 }
 
-/* 3. Allow percentage-based heights in the application */
 html, body {
   height: 100%;
 }
 
-/* 4. Improve media defaults */
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
 }
 
-/* 5. Inherit fonts for form controls */
 input, button, textarea, select {
   font: inherit;
 }
 
-/* 6. Avoid text-wrapping overflows */
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
@@ -34,55 +29,198 @@ p, h1, h2, h3, h4, h5, h6 {
   --serif:Georgia,"Times New Roman",serif;
   --sans:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
 }
+
 *{box-sizing:border-box}
-body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.65;font-size:1.05rem}
-img{max-width:100%;height:auto;display:block}
-a{color:var(--sea)}
-a:hover{color:var(--coral)}
-:focus-visible{outline:3px solid var(--coral);outline-offset:2px}
-h1,h2,h3{font-family:var(--serif);line-height:1.2;color:var(--sea)}
-h1{font-size:clamp(2rem,5vw,3.2rem);margin:0 0 .5em}
-h2{font-size:clamp(1.5rem,3vw,2rem)}
-.wrap{max-width:68rem;margin:0 auto;padding:0 1.25rem}
-.prose{max-width:42rem}
+body {
+  margin:0;font-family:var(--sans);
+  color:var(--ink);background:var(--paper);
+  line-height:1.65;font-size:1.05rem
+}
+img {
+  max-width:100%;
+  height:auto;
+  display:block
+}
+a {
+  color:var(--sea)
+}
+a:hover{
+  color:var(--coral)
+}
+:focus-visible{
+  outline:3px solid var(--coral);
+  outline-offset:2px
+}
+h1,h2,h3 {
+  font-family:var(--serif);
+  line-height:1.2;
+  color:var(--sea)
+}
+h1 {
+  font-size:clamp(2rem,5vw,3.2rem);
+  margin:0 0 .5em
+}
+h2{
+  font-size:clamp(1.5rem,3vw,2rem)
+}
+.wrap{
+  max-width:68rem;margin:0 auto;padding:0 1.25rem
+}
+.prose{
+  max-width:42rem
+}
 
 /* ----- Header & navigation (menu collapses on small screens, no JavaScript needed) ----- */
-header{background:var(--ink);color:#fff}
-.bar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:.9rem 1.25rem}
-.logo{font-family:var(--serif);font-size:1.4rem;color:#fff;text-decoration:none;font-weight:bold}
-.menu-btn{display:none;color:#fff;border:1px solid #fff;padding:.3rem .8rem;border-radius:4px;cursor:pointer}
-#menu-toggle{position:absolute;opacity:0}
+header{
+  background:var(--ink);
+  color:#fff
+}
+.bar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  padding:.9rem 1.25rem
+}
+.logo{
+  font-family:var(--serif);
+  font-size:1.4rem;color:#fff;
+  text-decoration:none;font-weight:bold
+}
+.menu-btn{
+  display:none;
+  color:#fff;
+  border:1px solid #fff;
+  padding:.3rem .8rem;
+  border-radius:4px;
+  cursor:pointer
+}
+#menu-toggle{
+  position:absolute;opacity:0
+}
 #menu-toggle:focus-visible + .menu-btn{outline:3px solid var(--coral)}
-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1.5rem}
-nav a{color:#fff;text-decoration:none;padding:.3rem 0;border-bottom:3px solid transparent}
+nav ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  gap:1.5rem
+}
+nav a{
+  color:#fff;
+  text-decoration:none;
+  padding:.3rem 0;
+  border-bottom:3px solid transparent
+}
 nav a:hover,nav a[aria-current="page"]{border-bottom-color:var(--coral);color:#fff}
 
 /* ----- Hero ----- */
-.hero{background:var(--foam);border-bottom:1px solid var(--line)}
-.hero .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:2.5rem;align-items:center;padding-top:3rem;padding-bottom:3rem}
-.hero p{font-size:1.2rem}
-.btn{display:inline-block;background:var(--coral);color:#fff;padding:.7rem 1.4rem;border-radius:4px;text-decoration:none;font-weight:600}
+.hero{
+  background:var(--foam);
+  border-bottom:1px solid var(--line)
+}
+.hero .wrap{
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:2.5rem;
+  align-items:center;
+  padding-top:3rem;
+  padding-bottom:3rem
+}
+.hero p{
+  font-size:1.2rem
+}
+.btn{
+  display:inline-block;
+  background:var(--coral);
+  color:#fff;
+  padding:.7rem 1.4rem;
+  border-radius:4px;
+  text-decoration:none;
+  font-weight:600
+}
 .btn:hover{background:var(--ink);color:#fff}
 
 /* ----- Sections & cards ----- */
-main section{padding:2.5rem 0}
-.page-title{background:var(--foam);border-bottom:1px solid var(--line);padding:2.5rem 0 1.5rem}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.card{background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden}
-.card .body{padding:1rem 1.25rem 1.25rem}
-.card h3{margin:.2rem 0 .4rem}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start}
-figure{margin:0}
-figcaption{font-size:.9rem;color:#4a6168;padding-top:.4rem}
-.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1.25rem}
-.gallery img{border-radius:6px;border:1px solid var(--line);width:100%}
-blockquote{margin:1.5rem 0;padding:.5rem 1.25rem;border-left:5px solid var(--coral);background:var(--foam);font-family:var(--serif);font-size:1.15rem}
-ul.links li{margin-bottom:.6rem}
+main section{
+  padding:2.5rem 0
+}
+
+.page-title{
+  background:var(--foam);
+  border-bottom:1px solid var(--line);
+  padding:2.5rem 0 1.5rem
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.5rem
+}
+.card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:6px;
+  overflow:hidden
+}
+.card .body{
+  padding:1rem 1.25rem 1.25rem
+}
+.card h3{
+  margin:.2rem 0 .4rem
+}
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2.5rem;
+  align-items:start
+}
+figure{
+  margin:0
+}
+figcaption{
+  font-size:.9rem;
+  color:#4a6168;
+  padding-top:.4rem
+}
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));
+  gap:1.25rem
+}
+.gallery img{
+  border-radius:6px;
+  border:1px solid var(--line);
+  width:100%
+}
+blockquote{
+  margin:1.5rem 0;
+  padding:.5rem 1.25rem;
+  border-left:5px solid var(--coral);
+  background:var(--foam);
+  font-family:var(--serif);
+  font-size:1.15rem
+}
+ul.links li{
+  margin-bottom:.6rem
+}
 
 /* ----- Footer ----- */
-footer{background:var(--ink);color:#cfe3e0;padding:2rem 0;margin-top:2rem;font-size:.95rem}
-footer a{color:#fff}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+footer{
+  background:var(--ink);
+  color:#cfe3e0;
+  padding:2rem 0;
+  margin-top:2rem;
+  font-size:.95rem
+}
+footer a{
+  color:#fff
+}
+footer .wrap{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:1rem
+}
 
 /* ----- Tablet ----- */
 @media (max-width:56rem){
